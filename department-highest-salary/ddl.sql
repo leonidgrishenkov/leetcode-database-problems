@@ -1,17 +1,16 @@
-DROP TABLE IF EXISTS Employee;
-DROP TABLE IF EXISTS Department;
-
-CREATE TABLE Employee (
+CREATE TABLE IF NOT EXISTS Employee (
 	id int,
 	name varchar(255),
 	salary int,
 	departmentId int
 );
+TRUNCATE TABLE Employee;
 
-CREATE TABLE Department (
+CREATE TABLE IF NOT EXISTS Department (
 	id int,
 	name varchar(255)
 );
+TRUNCATE TABLE Department;
 
 INSERT INTO Employee (id, name, salary, departmentId) VALUES
 ('1', 'Joe', '70000', '1'),
